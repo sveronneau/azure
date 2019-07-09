@@ -1,0 +1,2 @@
+# azure
+Azure related scripts
