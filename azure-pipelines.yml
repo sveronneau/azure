@@ -13,6 +13,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'GCR'
-    repository: 'azure'
-    command: 'build'
+    repository: 'stacyv-sandbox/azure'
+    command: 'buildAndPush'
     Dockerfile: 'docker/Dockerfile'
