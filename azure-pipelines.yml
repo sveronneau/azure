@@ -17,5 +17,5 @@ steps:
     containerRegistry: 'GCR'
     repository: 'stacyv-sandbox/azure'    
     Dockerfile: 'docker/Dockerfile'
-    name: 'nginx'
-    tags: 'latest'
+    imageName: nginx
+    tags: latest
