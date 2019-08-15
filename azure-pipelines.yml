@@ -26,12 +26,12 @@ steps:
   displayName: 'Build image'
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerRegistryConnection: 'gcr-tutorial'
+    dockerRegistryConnection: 'GCR'
     imageName: '$(DockerImageName):$(Build.BuildId)'
 - task: Docker@0
   displayName: 'Publish image'
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerRegistryConnection: 'gcr-tutorial'
+    dockerRegistryConnection: 'GCR'
     action: 'Push an image'
     imageName: '$(DockerImageName):$(Build.BuildId)'
