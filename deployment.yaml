@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 90f66ed28516
+        image: gcr.io/stacyv-sandbox/azure@sha256:b8f39c6791020c3fa56777b943ad1ef2e7145d4cc133f7fa9eac3a0a78542493
         ports:
         - containerPort: 80
