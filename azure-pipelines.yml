@@ -15,13 +15,13 @@ steps:
     tags: nginx
     
 - task: CopyFiles@2
-  displayName: Copy Artifact
+  displayName: Copy artifacts
   inputs:
-    Contents: 'deployment.yaml'
+    Contents: '*.yaml'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     
 - task: PublishBuildArtifacts@1
-  displayName: Publish deployent.yaml artifact
+  displayName: Publish artifacts
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
