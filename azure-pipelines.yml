@@ -12,7 +12,7 @@ steps:
     repository: 'stacyv-sandbox/azure'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: latest:nginx
+    tags: latest
     
 - task: CopyFiles@2
   displayName: Copy Artifact
