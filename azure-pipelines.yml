@@ -15,7 +15,6 @@ steps:
     
 - task: CopyFiles@2
   inputs:
-    SourceFolder: ''
     Contents: 'deployment.yaml'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     
@@ -24,3 +23,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+    
