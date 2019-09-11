@@ -1,3 +1,19 @@
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "nginx-deployment-service"
+  namespace: "default"
+  labels:
+    app: "nginx"
+spec:
+  ports:
+  - protocol: "TCP"
+    port: 80
+  selector:
+    app: "nginx"
+  type: "LoadBalancer"
+  loadBalancerIP: ""
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
