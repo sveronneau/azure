@@ -8,9 +8,8 @@ steps:
 - task: Docker@2
   displayName: Build and Push
   inputs:
-    command: 'buildAndPush'
     containerRegistry: 'GCR'
-    repository: 'stacyv-sandbox/azure'    
-    Dockerfile: 'docker/Dockerfile'
-    tags: latest
+    repository: 'stacyv-sandbox/azure'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
     
