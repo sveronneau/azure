@@ -12,7 +12,7 @@ steps:
     repository: 'stacyv-sandbox/azure'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-        tags: |
+    tags: |
       nginx
       latest
     
