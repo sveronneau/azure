@@ -5,7 +5,7 @@ FROM ubuntu:16.04
 RUN apt-get update
 
 # Install nginx, php-fpm and supervisord from ubuntu repository
-RUN apt-get install -y nginx nano htop php7.0-fpm supervisor && \
+RUN apt-get install -y nginx htop php7.0-fpm supervisor && \
     rm -rf /var/lib/apt/lists/*
 
 #Define the ENV variable
@@ -22,8 +22,7 @@ RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' ${php_conf} && \
 #Copy supervisor configuration
 COPY supervisord.conf ${supervisor_conf}
 
-RUN mkdir -p /run/php && \
-    echo '<b>OMERS Rocks!</b>' >> /var/www/html/index.nginx-debian.html && \
+RUN mkdir -p /run/php && \    
     chown -R www-data:www-data /var/www/html && \
     chown -R www-data:www-data /run/php
 
