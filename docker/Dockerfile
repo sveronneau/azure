@@ -29,6 +29,9 @@ RUN mkdir -p /run/php && \
 # Volume configuration
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
 
+# Overwrite default HTML page
+RUN echo 'OMERS Rocks!' > /var/www/html/index.html
+
 # Configure Services and Port
 COPY start.sh /start.sh
 RUN chmod +x start.sh
