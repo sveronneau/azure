@@ -23,7 +23,7 @@ RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' ${php_conf} && \
 COPY supervisord.conf ${supervisor_conf}
 
 RUN mkdir -p /run/php && \
-    echo 'OMERS Rocks!' >> /var/www/html/index.nginx-debian.html && \
+    echo '<b>OMERS Rocks!</b>' >> /var/www/html/index.nginx-debian.html && \
     chown -R www-data:www-data /var/www/html && \
     chown -R www-data:www-data /run/php
 
