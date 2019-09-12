@@ -23,14 +23,12 @@ RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' ${php_conf} && \
 COPY supervisord.conf ${supervisor_conf}
 
 RUN mkdir -p /run/php && \
+    echo 'OMERS Rocks!' >> /var/www/html/index.nginx-debian.html && \
     chown -R www-data:www-data /var/www/html && \
     chown -R www-data:www-data /run/php
 
 # Volume configuration
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
-
-# Overwrite default HTML page
-RUN echo 'OMERS Rocks!' >> /var/www/html/index.nginx-debian.html
 
 # Configure Services and Port
 COPY start.sh /start.sh
