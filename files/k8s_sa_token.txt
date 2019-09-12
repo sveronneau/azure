@@ -1,0 +1,5 @@
+kubectl create serviceaccount my-azure-worker
+kubectl create clusterrolebinding my-azure-worker-binding --clusterrole=edit --serviceaccount=default:my-azure-worker
+kubectl get secret
+kubectl get secret my-azure-worker-token-XXXXXX -o yaml
+Paste output to secret section in AzureDevops K8s connection.
