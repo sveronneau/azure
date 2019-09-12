@@ -30,7 +30,7 @@ RUN mkdir -p /run/php && \
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
 
 # Overwrite default HTML page
-RUN echo 'OMERS Rocks!' > /var/www/html/stacy.html 
+RUN echo 'OMERS Rocks!' >> /var/www/html/index.nginx-debian.html
 
 # Configure Services and Port
 COPY start.sh /start.sh
