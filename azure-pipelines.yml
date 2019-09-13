@@ -13,6 +13,7 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: |
+      '$(Build.BuildId)'
       nginx      
     
 - task: CopyFiles@2
@@ -27,3 +28,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+    
