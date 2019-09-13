@@ -13,8 +13,8 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: |
-      '$(Build.BuildId)'
-      nginx      
+      $(Build.BuildId)
+      nginx
     
 - task: CopyFiles@2
   displayName: Copy artifacts
