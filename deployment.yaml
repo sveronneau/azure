@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/stacyv-sandbox/azure:latest
-        tags: nginx
+        image: gcr.io/stacyv-sandbox/azure:nginx
         ports:
         - containerPort: 80
         imagePullPolicy: Always
