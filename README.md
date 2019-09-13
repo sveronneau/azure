@@ -5,4 +5,4 @@
 
 Azure DevOps CI pipeline that pushes the Docker container to GCR.io (GCP).
 
-# After the initial push, test a rolling upgrade by using the version number for the tag.
+# After the initial push, test a rolling update by using the version number for the tag insteand of image:nginx.
